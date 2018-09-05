@@ -10,7 +10,7 @@ campoFiltro.addEventListener("input", function(){
         var paciente = pacientes[i];
         var tdNome = paciente.querySelector(".info-nome");
         var nome = tdNome.textContent;
-        var expressao = new RegExp(this.value, "i");
+        var expressao = new RegExp(this.value, "i"); //regex, com o que eu quero procurar, e o "i" é pra falar que é case insensitive
         if (!expressao.test(nome)) {
           paciente.classList.add("invisivel");
         }
